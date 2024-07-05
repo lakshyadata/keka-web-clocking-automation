@@ -1,0 +1,14 @@
+[Unit]
+Description=Keka Web Clock-Out Service
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /path/to/keka_script.py
+Environment=KEKA_EMAIL=your_email@example.com
+Environment=KEKA_PASSWORD=your_password
+Environment=KEKA_URL=https://changeme.keka.com/ui/#
+Environment=KEKA_CHECK=out
+
+[Install]
+WantedBy=multi-user.target

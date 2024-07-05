@@ -1,0 +1,15 @@
+# keka-web-clock-in.service
+[Unit]
+Description=Keka Web Clock-In Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /path/to/keka_script.py
+Environment=KEKA_EMAIL=your_email@example.com
+Environment=KEKA_PASSWORD=your_password
+Environment=KEKA_URL=https://changeme.keka.com/ui/#
+Environment=KEKA_CHECK=in
+
+[Install]
+WantedBy=multi-user.target
