@@ -30,4 +30,4 @@ jobs:
         env:
           KEKA_USERNAME: ${{ secrets.KEKA_USERNAME }}
           KEKA_PASSWORD: ${{ secrets.KEKA_PASSWORD }}
-        run: python main.py
+        run: python keka_script.py
